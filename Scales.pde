@@ -45,19 +45,15 @@ void scale(int x, int y, int filler) {
     endShape();
   //}
 }
-void mousePressed() {
-  redraw();
-}
-
 boolean stroke = true;
-void keyPressed() {
-  if (key == ENTER) {
+
+void mousePressed() {
+  if (mouseButton == RIGHT){
     if (stroke)
-      stroke(0, 0, 0);
-    else
       noStroke();
+    else
+      stroke(0);
     stroke = !stroke;
-    
-    redraw();
   }
+  redraw();
 }
