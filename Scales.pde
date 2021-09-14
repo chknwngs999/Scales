@@ -25,8 +25,6 @@ void scale(int x, int y, int filler) {
   int ySize = (int)(Math.random()*5+15); //optional, could use 20
   
   //for (int i = 0; i <= 10; i++) {
-    if (!stroke)
-      stroke(0, 0, 0);
     if (filler == 2) {
       if (stroke)
         stroke(tocolor+20, 255, 120);
@@ -40,6 +38,8 @@ void scale(int x, int y, int filler) {
         stroke(255, 120, tocolor+20);
       fill(255, 100, tocolor);
     }
+    if (!stroke)
+      stroke(0, 0, 0);
     
     beginShape();
     curveVertex(x-xSize/2, y-ySize/2);
