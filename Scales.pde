@@ -5,13 +5,13 @@ void setup() {
 void draw() {
   //your code here
   int filling = (int)(Math.random()*3);
-  if (filling == 2) {
+  /*if (filling == 2) {
     background(255, 255, 100);
   } else if (filling== 1) {
     background(100, 255, 255);
   } else {
     background(255, 100, 255);
-  }
+  }*/
   for (int i = 710; i >= -15; i-=(int)(Math.random()*10+10)) {
     for (int j = 710; j >= -15; j-=(int)(Math.random()*10+10)) {
       scale(i, j, filling);
