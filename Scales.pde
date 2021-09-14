@@ -4,7 +4,6 @@ void setup() {
 }
 void draw() {
   //your code here
-  //noStroke();
   int filling = (int)(Math.random()*3);
   if (filling == 2) {
     background(255, 255, 100);
@@ -26,13 +25,22 @@ void scale(int x, int y, int filler) {
   int ySize = (int)(Math.random()*5+15); //optional, could use 20
   
   //for (int i = 0; i <= 10; i++) {
+    if (!stroke)
+      stroke(0, 0, 0);
     if (filler == 2) {
+      if (stroke)
+        stroke(tocolor+20, 255, 120);
       fill(tocolor, 255, 100);
     } else if (filler == 1) {
+      if (stroke)
+        stroke(130, tocolor+30, 255);
       fill(100, tocolor, 255);
     } else {
+      if (stroke)
+        stroke(255, 120, tocolor+20);
       fill(255, 100, tocolor);
     }
+    
     beginShape();
     curveVertex(x-xSize/2, y-ySize/2);
     curveVertex(x-xSize/2, y-ySize/2);
@@ -49,10 +57,6 @@ boolean stroke = true;
 
 void mousePressed() {
   if (mouseButton == RIGHT){
-    if (stroke)
-      noStroke();
-    else
-      stroke(0, 0, 0);
     stroke = !stroke;
   }
   redraw();
