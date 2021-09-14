@@ -52,7 +52,7 @@ void mousePressed() {
     if (stroke)
       noStroke();
     else
-      stroke(0);
+      stroke(0, 0, 0);
     stroke = !stroke;
   }
   redraw();
