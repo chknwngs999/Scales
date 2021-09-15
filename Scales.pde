@@ -1,3 +1,5 @@
+boolean stroke = true;
+
 void setup() {
   size(700, 700);  //feel free to change the size
   noLoop(); //stops the draw() function from repeating
@@ -5,13 +7,6 @@ void setup() {
 void draw() {
   //your code here
   int filling = (int)(Math.random()*3);
-  /*if (filling == 2) {
-    background(255, 255, 100);
-  } else if (filling== 1) {
-    background(100, 255, 255);
-  } else {
-    background(255, 100, 255);
-  }*/
   for (int i = 710; i >= -15; i-=(int)(Math.random()*10+10)) {
     for (int j = 710; j >= -15; j-=(int)(Math.random()*10+10)) {
       scale(i, j, filling);
@@ -21,10 +16,9 @@ void draw() {
 void scale(int x, int y, int filler) {
   //your code here
   int tocolor = (int)(Math.random()*255);
-  int xSize = (int)(Math.random()*10+30); //optional, could use 40
-  int ySize = (int)(Math.random()*5+15); //optional, could use 20
+  int xSize = (int)(Math.random()*10+30);
+  int ySize = (int)(Math.random()*5+15);
   
-  //for (int i = 0; i <= 10; i++) {
     if (filler == 2) {
       if (stroke)
         stroke(tocolor+20, 255, 120);
@@ -53,7 +47,6 @@ void scale(int x, int y, int filler) {
     endShape();
   //}
 }
-boolean stroke = true;
 
 void mousePressed() {
   if (mouseButton == RIGHT){
