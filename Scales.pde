@@ -41,7 +41,9 @@ void scale(int x, int y, int filler) {
     fill(255, 100, tocolor);
   }
   
-  beginShape();
+  ellipse(x-xSize/2, y-ySize/2, xSize+(int)(Math.random()*5), ySize+(int)(Math.random()*5));
+  
+  /*beginShape();
   curveVertex(x-xSize/2, y-ySize/2);
   curveVertex(x-xSize/2, y-ySize/2);
   
@@ -50,7 +52,7 @@ void scale(int x, int y, int filler) {
   
   curveVertex(x-xSize/2, y+ySize/2);
   curveVertex(x-xSize/2, y+ySize/2);
-  endShape();
+  endShape();*/
 }
 
 void mousePressed() {
