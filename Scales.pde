@@ -16,15 +16,16 @@ void draw() {
   for (int i = 710; i >= -15; i-=(int)(Math.random()*10+10)) {
     for (int j = 710; j >= -15; j-=(int)(Math.random()*10+10)) {
       scale(i, j, filling);
+      System.out.println(i + " " + j);
     }
   }
 }
 void scale(int x, int y, int filler) {
-  int tocolor = (int)(Math.random()*255);
+  //int tocolor = (int)(Math.random()*255);
   int xSize = (int)(Math.random()*10+30);
   int ySize = (int)(Math.random()*5+15);
   
-  if (filler == 2) {
+  /*if (filler == 2) {
     if (stroke) {
       stroke(tocolor+20, 255, 120);
     }
@@ -39,7 +40,7 @@ void scale(int x, int y, int filler) {
       stroke(255, 120, tocolor+20);
     }
     fill(255, 100, tocolor);
-  }
+  }*/
   
   ellipse(x-xSize/2, y-ySize/2, xSize+(int)(Math.random()*5), ySize+(int)(Math.random()*5));
   
@@ -56,10 +57,10 @@ void scale(int x, int y, int filler) {
 }
 
 void mousePressed() {
-  /*if (mouseButton == RIGHT){
+  if (mouseButton == RIGHT){
     if (stroke)
       stroke(0, 0, 0);
     stroke = !stroke;
-  }*/
+  }
   redraw();
 }
