@@ -56,10 +56,10 @@ void scale(int x, int y, int filler) {
 }
 
 void mousePressed() {
-  if (mouseButton == RIGHT){
+  /*if (mouseButton == RIGHT){
     if (stroke)
       stroke(0, 0, 0);
     stroke = !stroke;
-  }
+  }*/
   redraw();
 }
