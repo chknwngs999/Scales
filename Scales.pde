@@ -1,7 +1,7 @@
 boolean strokebool = false;
 
 void setup() {
-  size(500, 500);
+  size(700, 700);
   noLoop();
 }
 void draw() {
@@ -13,8 +13,8 @@ void draw() {
   } else {
     background(255, 100, 255);
   }
-  for (int i = 510; i >= -15; i-=(int)(Math.random()*10+10)) {
-    for (int j = 510; j >= -15; j-=(int)(Math.random()*10+10)) {
+  for (int i = 710; i >= -15; i-=(int)(Math.random()*10+10)) {
+    for (int j = 710; j >= -15; j-=(int)(Math.random()*10+10)) {
       scale(i, j, filling);
     }
   }
@@ -44,9 +44,9 @@ void scale(int x, int y, int filler) {
     stroke(0, 0, 0);
   }
   
-  ellipse(x-xSize/2, y-ySize/2, xSize+(int)(Math.random()*5), ySize+(int)(Math.random()*5));
+  //ellipse(x-xSize/2, y-ySize/2, xSize+(int)(Math.random()*5), ySize+(int)(Math.random()*5));
   
-  /*beginShape();
+  beginShape();
   curveVertex(x-xSize/2, y-ySize/2);
   curveVertex(x-xSize/2, y-ySize/2);
   
@@ -55,7 +55,7 @@ void scale(int x, int y, int filler) {
   
   curveVertex(x-xSize/2, y+ySize/2);
   curveVertex(x-xSize/2, y+ySize/2);
-  endShape();*/
+  endShape();
 }
 
 void mousePressed() {
