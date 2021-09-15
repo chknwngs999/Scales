@@ -32,8 +32,6 @@ void scale(int x, int y, int filler) {
         stroke(255, 120, tocolor+20);
       fill(255, 100, tocolor);
     }
-    if (!stroke)
-      stroke(0, 0, 0);
     
     beginShape();
     curveVertex(x-xSize/2, y-ySize/2);
@@ -50,6 +48,8 @@ void scale(int x, int y, int filler) {
 
 void mousePressed() {
   if (mouseButton == RIGHT){
+    if (stroke)
+      stroke(0, 0, 0);
     stroke = !stroke;
   }
   redraw();
