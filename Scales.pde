@@ -15,7 +15,7 @@ void draw() {
   }
   for (int i = 510; i >= -15; i-=(int)(Math.random()*10+10)) {
     for (int j = 510; j >= -15; j-=(int)(Math.random()*10+10)) {
-      scale(i, j, filling);
+      scale(i-500, j-500, filling);
       System.out.println(i + " " + j);
     }
   }
