@@ -1,7 +1,7 @@
 boolean stroke = true;
 
 void setup() {
-  size(700, 700);
+  size(500, 500);
   noLoop();
 }
 void draw() {
@@ -13,8 +13,8 @@ void draw() {
   } else {
     background(255, 100, 255);
   }
-  for (int i = 710; i >= -15; i-=(int)(Math.random()*10+10)) {
-    for (int j = 710; j >= -15; j-=(int)(Math.random()*10+10)) {
+  for (int i = 510; i >= -15; i-=(int)(Math.random()*10+10)) {
+    for (int j = 510; j >= -15; j-=(int)(Math.random()*10+10)) {
       scale(i, j, filling);
       System.out.println(i + " " + j);
     }
