@@ -1,4 +1,4 @@
-boolean stroke = true;
+boolean strokebool = false;
 
 void setup() {
   size(500, 500);
@@ -15,32 +15,34 @@ void draw() {
   }
   for (int i = 510; i >= -15; i-=(int)(Math.random()*10+10)) {
     for (int j = 510; j >= -15; j-=(int)(Math.random()*10+10)) {
-      scale(i-500, j-500, filling);
-      System.out.println(i + " " + j);
+      scale(i, j, filling);
     }
   }
 }
 void scale(int x, int y, int filler) {
-  //int tocolor = (int)(Math.random()*255);
+  int tocolor = (int)(Math.random()*255);
   int xSize = (int)(Math.random()*10+30);
   int ySize = (int)(Math.random()*5+15);
   
-  /*if (filler == 2) {
-    if (stroke) {
+  if (filler == 2) {
+    if (strokebool) {
       stroke(tocolor+20, 255, 120);
     }
     fill(tocolor, 255, 100);
   } else if (filler == 1) {
-    if (stroke) {
+    if (strokebool) {
       stroke(130, tocolor+30, 255);
     }
     fill(100, tocolor, 255);
   } else {
-    if (stroke) {
+    if (strokebool) {
       stroke(255, 120, tocolor+20);
     }
     fill(255, 100, tocolor);
-  }*/
+  }
+  if (!strokebool){
+    stroke(0, 0, 0);
+  }
   
   ellipse(x-xSize/2, y-ySize/2, xSize+(int)(Math.random()*5), ySize+(int)(Math.random()*5));
   
@@ -58,9 +60,9 @@ void scale(int x, int y, int filler) {
 
 void mousePressed() {
   if (mouseButton == RIGHT){
-    if (stroke)
+    if (strokebool)
       stroke(0, 0, 0);
-    stroke = !stroke;
+    strokebool = !strokebool;
   }
   redraw();
 }
