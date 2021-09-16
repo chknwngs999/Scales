@@ -45,16 +45,17 @@ void scale(int x, int y, int filler) {
   }
   
   //ellipse(x-xSize/2, y-ySize/2, xSize+(int)(Math.random()*5), ySize+(int)(Math.random()*5));
+  int moving = (int)(Math.random()*11)
   
   beginShape();
-  curveVertex(x-xSize/2, y-ySize/2);
-  curveVertex(x-xSize/2, y-ySize/2);
+  curveVertex(x-xSize/2-moving, y-ySize/2);
+  curveVertex(x-xSize/2-moving, y-ySize/2);
   
-  curveVertex(x+xSize/2, (y-ySize/2)+(int)(Math.random()*5));
-  curveVertex(x+xSize/2, (y+ySize/2)-(int)(Math.random()*5));
+  curveVertex(x+xSize/2-moving, (y-ySize/2)+(int)(Math.random()*5));
+  curveVertex(x+xSize/2-moving, (y+ySize/2)-(int)(Math.random()*5));
   
-  curveVertex(x-xSize/2, y+ySize/2);
-  curveVertex(x-xSize/2, y+ySize/2);
+  curveVertex(x-xSize/2-moving, y+ySize/2);
+  curveVertex(x-xSize/2-moving, y+ySize/2);
   endShape();
 }
 
