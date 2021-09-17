@@ -64,6 +64,9 @@ void mousePressed() {
     if (strokebool)
       stroke(0, 0, 0);
     strokebool = !strokebool;
+    loop();
+  } else {
+    noLoop();
   }
   redraw();
 }
